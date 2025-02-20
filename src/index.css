@@ -34,10 +34,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media(max-width:767px) {
+    max-width: 450px;
+  }
 }
 
 .main {
   width: 50rem;
+
+  @media(max-width:767px) {
+    width: 25rem;
+  }
 }
 
 .app-header {
@@ -46,6 +54,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media(max-width:767px) {
+    width: 24rem;
+  }
 }
 
 .error {
@@ -59,28 +71,50 @@ body {
 
 img {
   width: 14rem;
+
+  @media(max-width:767px) {
+    width: 5rem;
+  }
 }
 
 h1 {
   font-family: "Codystar";
   font-size: 5.6rem;
+
+  @media(max-width:767px) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-size: 3.6rem;
   margin-bottom: 2rem;
+
+  @media(max-width:767px) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 4rem;
+
+  @media(max-width:767px) {
+    font-size: 1.5rem;
+  }
 }
 
 h4 {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
+
+  @media(max-width:767px) {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    max-width: 400px;
+  }
 }
 
 .start {
@@ -97,6 +131,11 @@ h4 {
   grid-template-columns: auto auto;
   font-size: 1.8rem;
   color: var(--color-medium);
+
+  @media(max-width:767px) {
+    width: 26rem;
+    justify-content: center;
+  }
 }
 
 progress {
@@ -110,6 +149,7 @@ progress {
   background-color: var(--color-medium);
   border-radius: 100px;
 }
+
 ::-webkit-progress-value {
   background-color: var(--color-theme);
   border-radius: 100px;
@@ -126,6 +166,10 @@ progress {
   cursor: pointer;
   border-radius: 100px;
   transition: 0.3s;
+
+  @media(max-width:767px) {
+    width: 14rem;
+  }
 }
 
 .btn:not([disabled]):hover {
@@ -149,6 +193,11 @@ progress {
   flex-direction: column;
   gap: 1.2rem;
   margin-bottom: 3.2rem;
+
+  @media(max-width:767px) {
+    width: 24rem;
+    text-align: center;
+  }
 }
 
 .btn-option {
@@ -161,6 +210,7 @@ progress {
   border: 2px solid var(--color-theme);
   color: var(--color-light);
 }
+
 .btn-option.wrong {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
@@ -217,8 +267,7 @@ progress {
 .loader {
   width: 50px;
   height: 24px;
-  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
-      50%,
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0% 50%,
     radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
     radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
   background-size: calc(100% / 3) 12px;
@@ -230,12 +279,15 @@ progress {
   20% {
     background-position: 0% 0%, 50% 50%, 100% 50%;
   }
+
   40% {
     background-position: 0% 100%, 50% 0%, 100% 50%;
   }
+
   60% {
     background-position: 0% 50%, 50% 100%, 100% 0%;
   }
+
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }

@@ -1,10 +1,17 @@
 function Questions({ questions }) {
   return (
-    <ul>
-      {questions.map((question) => {
-        return <li key={question.id}>{question.question}</li>;
-      })}
-    </ul>
+    <div>
+      <h4>{questions.question}</h4>
+      <div className="options">
+        {questions.options.map((option) => {
+          return (
+            <button key={option} className="btn btn-option">
+              {option}
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

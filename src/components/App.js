@@ -1,16 +1,17 @@
 import { useEffect, useReducer } from "react";
+import { getQuestions } from "../firebase.js"; // Import Firestore
 
-import Header from "./Header";
-import Main from "./Main";
-import Loader from "./Loader";
-import Error from "./Error";
-import StartScreen from "./StartScreen";
-import Questions from "./Questions";
-import NextButton from "./NextButton";
-import Progress from "./Progress";
-import FinishScreen from "./FinishScreen";
-import Footer from "./Footer";
-import Timer from "./Timer";
+import Header from "./Header.js";
+import Main from "./Main.js";
+import Loader from "./Loader.js";
+import Error from "./Error.js";
+import StartScreen from "./StartScreen.js";
+import Questions from "./Questions.js";
+import NextButton from "./NextButton.js";
+import Progress from "./Progress.js";
+import FinishScreen from "./FinishScreen.js";
+import Footer from "./Footer.js";
+import Timer from "./Timer.js";
 
 const SECS_PER_QUESTION = 15;
 
@@ -98,12 +99,16 @@ export default function App() {
     (prev, cur) => prev + cur.points,
     0
   );
-
   useEffect(() => {
-    fetch("http://localhost:9000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch(() => dispatch({ type: "dataFailed" }));
+    async function fetchData() {
+      try {
+        const data = await getQuestions();
+        dispatch({ type: "dataReceived", payload: data });
+      } catch (error) {
+        dispatch({ type: "dataFailed" });
+      }
+    }
+    fetchData();
   }, []);
 
   return (

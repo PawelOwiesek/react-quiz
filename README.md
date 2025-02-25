@@ -1,6 +1,7 @@
 # 🎯 React Quiz
 
-A fun and interactive quiz application built with **React 19** and **useReducer** for state management. The app fetches questions from a local JSON server and dynamically updates the UI based on user responses. 🚀
+A fun and interactive quiz application built with React 19, using useReducer for state management.
+The app fetches questions from Firebase Firestore and dynamically updates the UI based on user responses. 🚀
 
 ## 📸 Screenshots
 

@@ -93,7 +93,7 @@ export default function App() {
     { questions, status, index, answer, points, highScore, secondsRemaining },
     dispatch,
   ] = useReducer(reducer, initialState);
-  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+
   const numQuestions = questions.length;
   const maxPossiblePoints = questions.reduce(
     (prev, cur) => prev + cur.points,

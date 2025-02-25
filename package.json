@@ -1,6 +1,7 @@
 {
   "name": "react-quiz",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
@@ -8,6 +9,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^11.3.1",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,8 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch src/data/questions.json --port 9000"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

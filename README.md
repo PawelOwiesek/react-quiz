@@ -1,31 +1,29 @@
 # 🎯 React Quiz
 
-A fun and interactive quiz application built with **React 19** and **useReducer** for state management. The app fetches questions from a local JSON server and dynamically updates the UI based on user responses. 🚀
+A fun and interactive quiz application built with React 19, using `useReducer` for state management.
+The app fetches questions from **Firebase Firestore** and dynamically updates the UI based on user responses. 🚀
 
 ## 📸 Screenshots
 
-![Start Screen](./screenshots/start-screen.png)
 _Start screen before the quiz begins._
 
-![Quiz in Progress](./screenshots/quiz-progress.png)
 _Answering questions with real-time progress tracking._
 
-![Final Score](./screenshots/quiz-finish.png)
 _Final results after completing the quiz._
 
 ## 🔥 Features
 
-✅ Fetches quiz questions from a JSON server 📡  
-✅ Multiple states: loading, error, ready, active, and finished  
-✅ Tracks user progress and calculates final score 📊  
-✅ Interactive UI with dynamic updates ⚡  
+✅ Fetches quiz questions from **Firebase Firestore** 📡\
+✅ Multiple states: loading, error, ready, active, and finished\
+✅ Tracks user progress and calculates final score 📊\
+✅ Interactive UI with dynamic updates ⚡\
 ✅ Fully responsive design 🖥️📱
 
 ## 🛠️ Technologies Used
 
 - **React 19** - Frontend framework
 - **useReducer & useEffect** - State management
-- **JSON Server** - Mock backend for questions
+- **Firebase Firestore** - Real-time database
 - **React Testing Library** - For unit testing
 - **Styled Components / CSS Modules** - Custom styling
 
@@ -37,13 +35,19 @@ _Final results after completing the quiz._
 npm install
 ```
 
-### 2️⃣ Start JSON Server
+### 2️⃣ Set Up Firebase
 
-```sh
-npm run server
+Create a `.env` file in the root directory and add your Firebase credentials:
+
 ```
-
-(Default runs on `http://localhost:9000/questions`)
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+```
 
 ### 3️⃣ Run the App
 
@@ -67,17 +71,15 @@ The app will open on `http://localhost:3000/`.
  ┃ ┣ 📜 NextButton.js
  ┃ ┣ 📜 Progress.js
  ┃ ┣ 📜 FinishScreen.js
- ┣ 📂 data
- ┃ ┣ 📜 questions.json
+ ┣ 📂 firebase
+ ┃ ┣ 📜 firebase.js
  ┣ 📜 App.js
  ┣ 📜 index.js
 ```
 
 ## ⚡ Future Enhancements
 
-🔹 Add categories & difficulty levels 🔥  
-🔹 Implement a timer for each question ⏳  
-🔹 Multiplayer support 👥
+🔹 Add categories & difficulty levels 🔥
 
 ## 📜 License
 

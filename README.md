@@ -7,11 +7,11 @@ The app fetches questions from **Firebase Firestore** and dynamically updates th
 
 ## 📸 Screenshots
 
-_Start screen before the quiz begins._
+_Start screen before the quiz begins._![image](public/startScreen.png)
 
-_Answering questions with real-time progress tracking._
+_Answering questions with real-time progress tracking._![image](public/quiz-start.png)
 
-_Final results after completing the quiz._
+_Final results after completing the quiz._![image](public/finish-screen.png)
 
 ## 🔥 Features
 
